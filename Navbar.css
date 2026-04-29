@@ -1,0 +1,149 @@
+.announcement-bar {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  padding: 8px 16px;
+  font-family: var(--font-body);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  height: 56px;
+  background: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar--transparent {
+  background: transparent;
+  border-bottom: none;
+  position: absolute;
+  top: 36px;
+  left: 0;
+  right: 0;
+}
+
+.navbar--transparent .nav-link,
+.navbar--transparent .nav-btn {
+  color: #fff;
+}
+
+.navbar--transparent .navbar__logo {
+  color: #fff;
+}
+
+.navbar__left,
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+}
+
+.navbar__right {
+  justify-content: flex-end;
+}
+
+.navbar__center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar__logo {
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #000;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.nav-link:hover {
+  opacity: 0.5;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #000;
+}
+
+.nav-btn:hover {
+  opacity: 0.5;
+}
+
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.navbar__hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: #000;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 200;
+  flex-direction: column;
+  padding: 80px 32px 32px;
+  gap: 24px;
+}
+
+.mobile-nav-link {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: #000;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .navbar__left,
+  .navbar__right {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+}
